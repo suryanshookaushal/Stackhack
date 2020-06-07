@@ -5,7 +5,10 @@ var express  = require('express');
 var mongoose = require('mongoose');
 var app = express();
 
-mongoose.connect("mongodb://localhost/newdata", { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://anshoo:anshooman@cluster0-wftpq.mongodb.net/<dbname>?retryWrites=true&w=majority",
+				 { useNewUrlParser: true, 
+				  useUnifiedTopology: true,
+				 useCreateIndex: true});
 app.set("view engine","ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
