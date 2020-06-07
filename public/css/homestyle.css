@@ -1,0 +1,138 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lilita One', cursive;
+}
+
+header h1 {
+  color: black;
+}
+header h1 {
+  font-family: 'Lilita One', cursive;
+}
+header ul {
+  list-style: none;
+  padding: 0;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+#homepage {
+  width: 100%;
+  height: 100%;
+}
+#homepage header {
+  padding: 20px;
+  background: white;
+}
+#homepage header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#homepage header h1 {
+  float: left;
+  margin: 0;
+}
+#homepage header ul {
+  float: right;
+}
+#homepage header ul li {
+  margin: 0 10px;
+}
+#homepage img {
+  display: inline-block;
+  width: 50%;
+  height: 25%;
+}
+
+/**
+Grid Stuff
+*/
+@supports (display: grid) {
+  #homepage {
+    grid-template-rows: auto repeat(6, 1fr);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255, 255, 255) ;
+    text-align: center;
+  }
+  #homepage header {
+    display: grid;
+  }
+  #homepage header h1, #homepage header ul {
+    float: none;
+  }
+  #homepage img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #homepage header {
+      grid-column: 1;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+    #homepage header h1 {
+      text-align: left;
+    }
+    #homepage header ul {
+      text-align: right;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    #homepage {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr;
+      position: absolute;
+      z-index: 1;
+    }
+    #homepage header {
+      position: absolute;
+      z-index: 10;
+      grid-template-rows: 1fr 1fr;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      padding: 0;
+    }
+    #homepage header h1 {
+      display: grid;
+      align-items: end;
+      font-size: 80px;
+    }
+    #homepage header ul {
+      margin: 10px 0 0 0;
+    }
+    #homepage img#showcase-1 {
+      grid-column: 1;
+    }
+    #homepage img#showcase-2 {
+      grid-column: 2;
+    }
+    #homepage img#showcase-3 {
+      grid-column: 3;
+    }
+    #homepage img#showcase-4 {
+      grid-column: 4;
+    }
+    #homepage img#showcase-5 {
+      grid-column: 5;
+    }
+    #homepage img#showcase-6 {
+      grid-column: 6;
+    }
+  }
+}

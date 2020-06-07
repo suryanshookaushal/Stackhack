@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success!!!</title>
+	<link rel='stylesheet' type="text/css" href="css/success.css">
+</head>
+<body>
+	<% 
+	var last = blogs[Object.keys(blogs)[Object.keys(blogs).length - 1]];
+	%>
+	<div class="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<strong style="margin-left: 20px;">Event successfully registered... Your Id is: <%= last._id.valueOf() %></strong>
+	  </div>
+	  <br><br><br><br><br>
+	  <div style="padding-left: 450px;"><a href="/forms" class="regagain">Register more events</a></div>
+	  <div style="padding-right: 550px;"><a href="/events" class="regagain1">Go to events page</a></div>
+</body>
+</html>

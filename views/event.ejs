@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Success Page</title>
+  
+  <link rel="stylesheet" href="css/events.css">
+
+</head>
+<body>
+  <div class="topnav">
+    <a class="navbar-brand">EVENTZEN</a>
+    <a class="nav-link" href="/events">Events <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="/forms">Form</a>
+  </div>
+  <br>
+  <h1 style="text-align: center;font-size: 50px;font-family: cursive">EVENTS PAGE</h1>
+<% blogs.forEach(function(blog){ %>
+<body>
+	<div id="root">
+		<div class="parallelogram">
+			<div class="content">
+				<h1><%= blog.name %></h1>
+        <h4 style="color: #68818c;">Reg id: <%= blog._id.valueOf() %></h4>
+        <h4 style="color: #68818c;">Event name: <%= blog.name %></h4>
+        <h4 style="color: #68818c;">Mobile: <%= blog.mobile %></h4>
+        <h4 style="color: #68818c;">Email: <%= blog.email %></h4>
+        <h4 style="color: #68818c;">Options : <%= blog.options %></h4>
+        <h4 style="color: #68818c;">No. Of Tickets: <%= blog.ticket %></h4>
+			</div>
+		</div>
+  </div>
+  <% }); %>
+  <div style="text-align: center;"><a href="/" class="regagain">Back to home page</a></div>
+</body>
+  
+</body>
+</html>

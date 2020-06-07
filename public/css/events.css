@@ -1,0 +1,100 @@
+
+.regagain{
+  font-size: 20px;
+  background-color: rgb(65, 58, 58);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  background: #f8d660;
+  -webkit-font-smoothing: antialiased !important;
+}
+#root {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+#root .parallelogram {
+	width: 350px;
+	height: 460px;
+	padding: 2rem;
+	transform: skewY(-10deg);
+	border-radius: 4px;
+	background: #212125;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+	color: #fff;
+	display: flex;
+	position: relative;
+	flex-direction: colunm;
+	transition: all 0.5s ease-in-out;
+ 	border: 4px solid transparent;
+	border-image: linear-gradient(30deg, #d367c1 10%, #dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%);
+	-webkit-border-image: -webkit-linear-gradient(30deg, #d367c1 10%, 	#dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%);
+	border-image-slice: 1;
+}
+
+
+#root .parallelogram .content {
+		transform: skewY(10deg);
+		margin: 30px auto 0 auto;
+}
+
+#root .parallelogram .content p {
+	font-size: 20px;
+}
+
+#root .parallelogram .content * {
+margin-bottom: 40px;
+	line-height: 1.5;
+}
